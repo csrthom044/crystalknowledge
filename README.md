@@ -1,2 +1,3 @@
-# crystalknowledge
-CS410 - Summer 26 - Crystal
+* [Project Website](https://github.com/csrthom044/crystalknowledge)
+
+# Project structure
