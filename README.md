@@ -1,3 +1,3 @@
-* [Project Website](https://github.com/csrthom044/crystalknowledge)
+* [Project Website](https://csrthom044.github.io/crystalknowledge/)
 
 # Project structure
