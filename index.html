@@ -6,66 +6,82 @@ title: Knowledge Is Power (KIP) - Project Outline
 <style>
   /* --- MERLOT THEME WIDTH EXPANSION OVERRIDES --- */
   .shell {
-    max-width: 1100px !important; /* Expands maximum layout constraint from 670px to 1100px */
-    width: 90% !important;        /* Keeps layout fully responsive on smaller displays */
+    max-width: 1100px !important;
+    width: 90% !important;
   }
 
-  /* Adjusts header/section structures to fill the expanded container space cleanly */
   .shell header, 
   .shell section, 
   #main_content {
     width: 100% !important;
     box-sizing: border-box;
   }
-  /* Hides theme footer attribution element */
-  footer, .site-footer, .contextual-info {
+
+  /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
+  /* Aggressively forces the default footer and built-in text to hide */
+  footer, .site-footer, .contextual-info, #header_meta {
     display: none !important;
   }
 
-  /* Hides the "Fork me on GitHub" top-corner ribbon graphic and link */
-  a[href*="github.com"] img[src*="ribbons"], 
-  a.github-fork-ribbon,
-  #forkongithub {
+  /* Hides the default corner ribbon completely */
+  a[href*="github.com"], 
+  [id*="fork"], 
+  .github-fork-ribbon {
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
-  /* Ensures header text contrast on Merlot theme dark backgrounds */
-  header h1 {
+  /* --- FIX COMPACT LAYOUT CONFLICTS --- */
+  /* Cleans up spacing so text elements do not slide into theme assets */
+  .custom-navigation-container {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: rgba(74, 21, 37, 0.9); /* Translucent Merlot Red matching box background */
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+
+  .custom-navigation-container h1 {
     color: #ffffff !important;
-    margin-top: 20px;
+    margin: 0 0 10px 0 !important;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
-  nav strong {
-    color: #ffffff;
+  .custom-navigation-container nav strong {
+    color: #ffffff !important;
   }
 
-  /* Custom styling to keep navigation links highly visible */
-  nav a {
+  .custom-navigation-container nav a {
     color: #ffcccb !important;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 5px;
+    padding: 0 8px;
+    font-size: 1.1em;
   }
 
-  nav a:hover {
+  .custom-navigation-container nav a:hover {
+    color: #ffffff !important;
     text-decoration: underline !important;
   }
 </style>
 
-<header>
+<!-- Cleaned Up Custom Header Segment Wrapper -->
+<div class="custom-navigation-container">
     <h1 style="text-align: center;">Knowledge is Power</h1>
     
     <!-- Navigation Links Targeting the Iframe -->
-    <nav style="text-align: center; margin-bottom: 20px;">
+    <nav style="text-align: center;">
         <strong>Project Navigation:</strong>
         <a href="labs.html" target="content-frame">Labs</a> | 
         <a href="bios.html" target="content-frame">Bios</a> | 
         <a href="feasibility.html" target="content-frame">Feasibility</a>
     </nav>
-</header>
+</div>
 
 <!-- Interactive Document Frame Container -->
-<div style="margin: 20px 0; text-align: center;">
+<div style="margin: 30px 0 20px 0; text-align: center;">
     <iframe 
         src="about:blank" 
         name="content-frame"
