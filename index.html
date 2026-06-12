@@ -8,6 +8,7 @@ title: Knowledge Is Power (KIP) - Project Outline
   .shell {
     max-width: 1100px !important;
     width: 90% !important;
+    position: relative;
   }
 
   .shell header, 
@@ -15,6 +16,29 @@ title: Knowledge Is Power (KIP) - Project Outline
   #main_content {
     width: 100% !important;
     box-sizing: border-box;
+  }
+  
+/* --- FIX AND RE-CENTER MERLOT HEADER DECORATIONS --- */
+  header {
+    background: none !important; /* Wipes out the misaligned background image */
+  }
+
+  /* Force the main ribbon block and blue shield to remain perfectly centered */
+  .ribbon-outer {
+    margin: 0 auto !important;
+    float: none !important;
+    position: relative;
+    display: block;
+    width: max-content;
+    min-width: 600px;
+  }
+    /* Hide the broken, unscalable side tails and background fix slices */
+  .left-tail, 
+  .right-tail, 
+  .banner-fix,
+  header::before,
+  body::before {
+    display: none !important;
   }
 
   /* --- COOKIE-CUTTER FIX FOR THE BLUE BAR --- */
