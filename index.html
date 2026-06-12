@@ -17,31 +17,12 @@ title: Knowledge Is Power (KIP) - Project Outline
     box-sizing: border-box;
   }
 
-  /* --- OVERRIDE ALL POSSIBLE MERLOT THEME BACKGROUND ELEMENTS --- */
-body::before, 
-body::after, 
-header::before, 
-header::after, 
-.shell::before, 
-.shell::after, 
-#main_content::before, 
-#main_content::after {
-  display: none !important;
-  background: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-/* Force standard browser clipping on the structural layout boxes */
-html, body, .shell, header {
-  overflow-x: hidden !important;
-}
-
-  /* Ensures global alignment elements stay centered and neatly clipped */
-  body, .shell {
-    overflow-x: hidden !important;
+  /* --- COOKIE-CUTTER FIX FOR THE BLUE BAR --- */
+  /* This slices the header container so nothing can render to the left of the ribbon */
+  header, 
+  .shell > header {
+    clip-path: inset(0px 0px -100px 0px) !important;
+    overflow: hidden !important;
   }
 
   /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
