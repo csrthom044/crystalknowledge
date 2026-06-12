@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: Knowledge Is Power (KIP) - Project Outline
 ---
 
@@ -22,6 +22,17 @@ title: Knowledge Is Power (KIP) - Project Outline
   footer, .site-footer, .contextual-info, #header_meta {
     display: none !important;
   }
+  
+/* --- COMPLETELY REMOVE THEME BACKGROUND RIBBONS --- */
+body > header, 
+.shell > header, 
+header {
+  display: none !important;
+  background: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
   /* Hides the default corner ribbon completely */
   a[href*="github.com"], 
