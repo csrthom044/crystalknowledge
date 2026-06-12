@@ -3,7 +3,7 @@ layout: default
 title: Knowledge Is Power (KIP) - Project Outline
 ---
 
- <style>
+<style>
   /* --- MERLOT THEME WIDTH EXPANSION OVERRIDES --- */
   .shell {
     max-width: 1100px !important;
@@ -12,24 +12,31 @@ title: Knowledge Is Power (KIP) - Project Outline
 
   .shell header, 
   .shell section, 
-  #main_content {    width: 100% !important;
+  #main_content {
+    width: 100% !important;
     box-sizing: border-box;
   }
 
-  /* --- FIX AND RESTORE MERLOT RIBBON (KILLS LEFT BLUE BAR) --- */
-  /* Clips everything extending outside the main layout container box */
-  header, 
-  #header,
-  .shell header {
-    overflow: hidden !important;
-    position: relative;
+  /* --- TARGET AND DESTROY THE LEFT BLUE BAR GRAPHIC --- */
+  /* This forcefully disables the underlying theme pseudo-element causing the overflow artifact */
+  body::before,
+  header::before,
+  .shell::before {
+    display: none !important;
+    background: none !important;
+    width: 0 !important;
+  }
+
+  /* Ensures global alignment elements stay centered and neatly clipped */
+  body, .shell {
+    overflow-x: hidden !important;
   }
 
   /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
   /* Aggressively forces the default footer and built-in text to hide */
   footer, .site-footer, .contextual-info, #header_meta {
     display: none !important;
-    }
+  }
 
   /* Hides the default corner ribbon completely */
   a[href*="github.com"], 
@@ -77,7 +84,7 @@ title: Knowledge Is Power (KIP) - Project Outline
 
 <!-- Cleaned Up Custom Header Segment Wrapper -->
 <div class="custom-navigation-container">
-    <h1 style="text-align: center;">Knowledge is Power</h1>
+    <h1 style="text-align: center;"></h1>
     
     <!-- Navigation Links Targeting the Iframe -->
     <nav style="text-align: center;">
