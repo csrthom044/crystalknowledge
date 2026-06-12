@@ -2,35 +2,41 @@
 layout: default
 title: Knowledge Is Power (KIP) - Project Outline
 ---
+
 <style>
-  /* Hides the default Merlot footer text */
+  /* Hides theme footer attribution element */
   footer, .site-footer, .contextual-info {
     display: none !important;
   }
 
-  /* Hides the "Fork me on GitHub" header ribbon image/link */
+  /* Hides the "Fork me on GitHub" top-corner ribbon graphic and link */
   a[href*="github.com"] img[src*="ribbons"], 
   a.github-fork-ribbon,
   #forkongithub {
     display: none !important;
   }
 </style>
-<!-- Interactive Document Frame Placement -->
+
+<header>
+    <h1 style="text-align: center;">Knowledge is Power</h1>
+    
+    <!-- Navigation Links Targeting the Iframe -->
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <strong>Project Navigation:</strong>
+        <a href="labs.html" target="content-frame">Labs</a> | 
+        <a href="bios.html" target="content-frame">Bios</a> | 
+        <a href="feasibility.html" target="content-frame">Feasibility</a>
+    </nav>
+</header>
+
+<!-- Interactive Document Frame Container -->
 <div style="margin: 20px 0; text-align: center;">
     <iframe 
         src="labs.html" 
-        title="KIP Lab 1"
+        name="content-frame"
+        title="KIP Project Content Frame"
         width="100%" 
         height="600" 
         style="border: 3px solid #4a1525; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </iframe>
 </div>
-
-<main>
-    <section>
-        <h2>1. This is how the text will look</h2>
-        <ul>
-            <li><strong>1.1. Societal Problem:</strong> Young people ages 16–19 often encounter laws involving driving...</li>
-        </ul>
-    </section>
-</main>
