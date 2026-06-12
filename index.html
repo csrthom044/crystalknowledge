@@ -4,6 +4,19 @@ title: Knowledge Is Power (KIP) - Project Outline
 ---
 
 <style>
+  /* --- MERLOT THEME WIDTH EXPANSION OVERRIDES --- */
+  .shell {
+    max-width: 1100px !important; /* Expands maximum layout constraint from 670px to 1100px */
+    width: 90% !important;        /* Keeps layout fully responsive on smaller displays */
+  }
+
+  /* Adjusts header/section structures to fill the expanded container space cleanly */
+  .shell header, 
+  .shell section, 
+  #main_content {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
   /* Hides theme footer attribution element */
   footer, .site-footer, .contextual-info {
     display: none !important;
