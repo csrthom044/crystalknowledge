@@ -4,3 +4,10 @@
 header .shell {
   overflow: hidden;
 }
+header {
+  background: none !important;
+}
+
+header::before {
+  display: none !important;
+}
