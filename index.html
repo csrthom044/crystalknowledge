@@ -125,20 +125,26 @@ title: Knowledge Is Power (KIP) - Project Outline
     font-weight: normal;
     user-select: none;
   }
+  
+  .custom-navigation-container nav a.active {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+    opacity: 1;
+  }
+
 </style>
 
-<!-- Cleaned Up Custom Header Segment Wrapper -->
+<!-- Custom Header Segment Wrapper -->
 <div class="custom-navigation-container">
-    <h1 style="text-align: center;"></h1>
-    
-    <!-- Navigation Links Targeting the Iframe -->
-    <nav style="text-align: center;">
+    <nav>
         <strong>Project Navigation:</strong>
-        <a href="home.html" target="content-frame">Home</a> |
-        <a href="bios.html" target="content-frame">Bios</a> |
-        <a href="labs.html" target="content-frame">Labs</a> |
+        <a href="home.html" target="content-frame" class="active">Home</a>
+        <span class="nav-divider">|</span>
+        <a href="bios.html" target="content-frame">Bios</a>
+        <span class="nav-divider">|</span>
+        <a href="labs.html" target="content-frame">Labs</a>
+        <span class="nav-divider">|</span>
         <a href="presentations.html" target="content-frame">Presentation</a>
-        
     </nav>
 </div>
 
@@ -153,3 +159,15 @@ title: Knowledge Is Power (KIP) - Project Outline
         style="border: 3px solid #4a1525; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #ffffff;">
     </iframe>
 </div>
+
+<!-- ACTIVE SCRIPT PLACEMENT -->
+<script>
+  document.querySelectorAll('.custom-navigation-container nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('.custom-navigation-container nav a').forEach(item => {
+        item.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+</script>
