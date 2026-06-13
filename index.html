@@ -77,37 +77,53 @@ title: Knowledge Is Power (KIP) - Project Outline
   }
 
   /* --- FIX COMPACT LAYOUT CONFLICTS --- */
-  /* Cleans up spacing so text elements do not slide into theme assets */
+   /* --- MERLOT NAVIGATION BANNER --- */
   .custom-navigation-container {
-    margin-top: 40px;
-    padding: 15px;
-    background-color: rgba(74, 21, 37, 0.9); /* Translucent Merlot Red matching box background */
+    margin: 40px auto 20px auto;
+    padding: 12px 24px;
+    background-color: #4a1525; /* Match your exact frame border Merlot */
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .custom-navigation-container h1 {
-    color: #ffffff !important;
-    margin: 0 0 10px 0 !important;
-    font-size: 2.2em;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  .custom-navigation-container nav {
+    color: #fdf6e2; /* Cream/off-white text matching the header */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .custom-navigation-container nav strong {
-    color: #ffffff !important;
+    color: #fdf6e2 !important;
+    margin-right: 5px;
   }
 
   .custom-navigation-container nav a {
-    color: #ffcccb !important;
+    color: #fdf6e2 !important;
     text-decoration: none;
-    font-weight: bold;
-    padding: 0 8px;
-    font-size: 1.1em;
+    padding: 0 4px;
+    transition: opacity 0.2s ease;
   }
 
+  
   .custom-navigation-container nav a:hover {
-    color: #ffffff !important;
     text-decoration: underline !important;
+    opacity: 0.9;
+  }
+
+  /* Color matching the divider line from the layout image */
+  .nav-divider {
+    color: #8c5366;
+    font-weight: normal;
+    user-select: none;
   }
 </style>
 
