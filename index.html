@@ -18,12 +18,11 @@ title: Knowledge Is Power (KIP) - Project Outline
     box-sizing: border-box;
   }
   
-/* --- FIX AND RE-CENTER MERLOT HEADER DECORATIONS --- */
+  /* --- FIX AND RE-CENTER MERLOT HEADER DECORATIONS --- */
   header {
     background: none !important; /* Wipes out the misaligned background image */
   }
 
-   /* --- RESTORE AND CENTER NATIVE MERLOT RIBBON --- */
   /* Keeps the theme header at its proper dimension so assets align perfectly */
   header, 
   .shell header {
@@ -33,8 +32,8 @@ title: Knowledge Is Power (KIP) - Project Outline
     float: none !important;
     position: relative !important;
     display: block !important;
-
   }
+
   /* Force the main ribbon block and blue shield to remain perfectly centered */
   .ribbon-outer {
     margin: 0 auto !important;
@@ -44,21 +43,14 @@ title: Knowledge Is Power (KIP) - Project Outline
     width: max-content;
     min-width: 600px;
   }
-    /* Hide the broken, unscalable side tails and background fix slices */
+
+  /* Hide the broken, unscalable side tails and background fix slices */
   .left-tail, 
   .right-tail, 
   .banner-fix,
   header::before,
   body::before {
     display: none !important;
-  }
-
-  /* --- COOKIE-CUTTER FIX FOR THE BLUE BAR --- */
-  /* This slices the header container so nothing can render to the left of the ribbon */
-  header, 
-  .shell > header {
-    clip-path: inset(0px 0px -100px 0px) !important;
-    overflow: hidden !important;
   }
 
   /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
@@ -77,11 +69,11 @@ title: Knowledge Is Power (KIP) - Project Outline
   }
 
   /* --- FIX COMPACT LAYOUT CONFLICTS --- */
-   /* --- MERLOT NAVIGATION BANNER --- */
+  /* --- MERLOT NAVIGATION BANNER --- */
   .custom-navigation-container {
-    margin: 40px auto 20px auto;
+    margin: -10px auto 20px auto; /* Tucks the nav bar up slightly into the banner shadow */
     padding: 12px 24px;
-    background-color: #4a1525; /* Match your exact frame border Merlot */
+    background-color: #4a1525; 
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     display: flex;
@@ -89,6 +81,8 @@ title: Knowledge Is Power (KIP) - Project Outline
     align-items: center;
     max-width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 10;
   }
 
   .custom-navigation-container nav {
@@ -112,7 +106,6 @@ title: Knowledge Is Power (KIP) - Project Outline
     padding: 0 4px;
     transition: opacity 0.2s ease;
   }
-
   
   .custom-navigation-container nav a:hover {
     text-decoration: underline !important;
@@ -131,8 +124,18 @@ title: Knowledge Is Power (KIP) - Project Outline
     text-decoration: underline !important;
     opacity: 1;
   }
-
 </style>
+
+<!-- NATIVE MERLOT BANNER MARKUP -->
+<header>
+  <div class="ribbon-outer">
+    <div class="ribbon-inner">
+      <h1>Knowledge Is Power</h1>
+      <h2>Team Crystal</h2>
+    </div>
+    <div class="shield"></div>
+  </div>
+</header>
 
 <!-- Custom Header Segment Wrapper -->
 <div class="custom-navigation-container">
