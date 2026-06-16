@@ -18,46 +18,6 @@ title: Knowledge Is Power (KIP) - Project Outline
     box-sizing: border-box;
   }
   
-  header {
-    background: none !important; /* Wipes out the misaligned background image */
-    display: block !important; /* RESTORES THE NATIVE HEADER THAT WAS HIDDEN */
-    width: 100% !important;
-    max-width: 740px !important; 
-    margin: 0 auto !important;
-    float: none !important;
-    position: relative !important;
-  }
-
-  /* Keeps the theme header at its proper dimension so assets align perfectly */
-  header, 
-  .shell header {
-    width: 100% !important;
-    max-width: 740px !important; 
-    margin: 0 auto !important;
-    float: none !important;
-    position: relative !important;
-    display: block !important;
-  }
-
-  /* Force the main ribbon block and blue shield to remain perfectly centered */
-  .ribbon-outer {
-    margin: 0 auto !important;
-    float: none !important;
-    position: relative;
-    display: block;
-    width: max-content;
-    min-width: 600px;
-  }
-
-  /* Hide the broken, unscalable side tails and background fix slices */
-  .left-tail, 
-  .right-tail, 
-  .banner-fix,
-  header::before,
-  body::before {
-    display: none !important;
-  }
-
   /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
   /* Aggressively forces the default footer and built-in text to hide */
   footer, .site-footer, .contextual-info, #header_meta {
