@@ -6,17 +6,27 @@ title: Knowledge Is Power (KIP) - Project Outline
 <style>
   /* --- MERLOT THEME WIDTH EXPANSION OVERRIDES --- */
   .shell {
-    max-width: 740px !important;
+    margin: 0 auto 20px auto;
+    max-width: 1000px !important;
     width: 90% !important;
     position: relative;
   }
 
-  .shell header, 
-  .shell section, 
-  #main_content {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
+  /* Keep header at original ribbon width */
+.shell header {
+  max-width: 740px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Expand only content */
+.shell section, 
+#main_content {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+}
   
   /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
   /* Aggressively forces the default footer and built-in text to hide */
