@@ -1,64 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Team Biographies</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; color: #333; background-color: #fafafa; }
-        h2 { color: #4a1525; border-bottom: 2px solid #4a1525; padding-bottom: 5px; }
-        p { line-height: 1.6; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .bio-card { background: white; padding: 20px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid #4a1525; }
-        .bio-card h3 { margin-top: 0; color: #4a1525; }
-        .role { display: inline-block; background-color: #e8dcd0; color: #4a1525; padding: 3px 8px; font-size: 0.85em; font-weight: bold; border-radius: 3px; margin-bottom: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Project Team Biographies</title>
+
+<style>
+:root{
+    --primary:#4a1525;
+    --primary-light:#f3ece8;
+    --border:#ddd;
+    --text:#333;
+    --bg:#fafafa;
+}
+
+body{
+    margin:0;
+    padding:30px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.page-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.page-header h1{
+    color:var(--primary);
+    margin-bottom:10px;
+    font-size:2.2rem;
+}
+
+.page-header p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+.bios-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.bio-card{
+    background:#fff;
+    border-radius:10px;
+    padding:25px;
+    text-align:center;
+    border-top:5px solid var(--primary);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bio-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.bio-card img{
+    width:160px;
+    height:160px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid var(--primary-light);
+    margin-bottom:15px;
+}
+
+.bio-card h3{
+    margin:10px 0 5px;
+    color:var(--primary);
+}
+
+.role{
+    display:inline-block;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-size:0.8rem;
+    font-weight:600;
+    padding:5px 10px;
+    border-radius:20px;
+    margin-bottom:12px;
+}
+
+.bio-card p{
+    line-height:1.6;
+    margin:0;
+    color:#555;
+}
+</style>
 </head>
-<body>
 
 <body>
-  <h1>Bios</h1>
-  <div class="bios-container">
-    <div class="bios-entry">
-      <img src="images/bios/BenjaminKeckley.png" alt="Ben puts on the stank face" width="256">
-      <h3>Benjamin Keckley</h3>
-      <p>Ben is a musician and game developer who fancies cats and coffee.</p>
+
+<div class="page-header">
+    <h1>Meet the Team</h1>
+    <p>
+        Knowledge Is Power (KIP) Project Team. Learn more about the
+        individuals contributing their skills, experience, and creativity
+        to the project.
+    </p>
+</div>
+
+<div class="bios-container">
+
+    <div class="bio-card">
+        <img src="images/bios/BenjaminKeckley.png" alt="Benjamin Keckley">
+        <h3>Benjamin Keckley</h3>
+        <div class="role">Developer & Musician</div>
+        <p>
+            Benjamin is a musician and game developer with interests in
+            creative technology, independent game design, and a strong
+            appreciation for cats and coffee.
+        </p>
     </div>
 
-    <div class="bios-entry">
-      <img src="images/bios/MarshallHoar.jpg" alt="Its winter time, picture of Marshall" width="256">
-      <h3>Marshall Hoar</h3>
-      <p>Marshall is a fan of outdoor activites.</p>
+    <div class="bio-card">
+        <img src="images/bios/MarshallHoar.jpg" alt="Marshall Hoar">
+        <h3>Marshall Hoar</h3>
+        <div class="role">Team Member</div>
+        <p>
+            Marshall enjoys outdoor activities and brings enthusiasm,
+            adaptability, and a collaborative mindset to team projects.
+        </p>
     </div>
 
-    <div class="bios-entry">
-      <img src="images/bios/PaulFlynn.jpg" alt="Mongol stare, picture of Paul" width="256">
-      <h3>Paul Flynn</h3>
-      <p>Paul is Pensacola Ice Flyers #2 fan.</p>
+    <div class="bio-card">
+        <img src="images/bios/PaulFlynn.jpg" alt="Paul Flynn">
+        <h3>Paul Flynn</h3>
+        <div class="role">Team Member</div>
+        <p>
+            Paul is an enthusiastic supporter of the Pensacola Ice Flyers
+            and enjoys contributing his unique perspective to group efforts.
+        </p>
     </div>
 
-    <div class="bios-entry">
-      <img src="images/bios/JannahElmousalami.png" alt="Affirmatively happy, picture of Jannah" width="256">
-      <h3>Jannah Elmousalami</h3>
-      <p>Jannah is an arguer who loves to do it.</p>
+    <div class="bio-card">
+        <img src="images/bios/JannahElmousalami.png" alt="Jannah Elmousalami">
+        <h3>Jannah Elmousalami</h3>
+        <div class="role">Team Member</div>
+        <p>
+            Jannah enjoys thoughtful discussion, problem-solving, and
+            engaging with new ideas through collaboration and debate.
+        </p>
     </div>
 
-    <div class="bios-entry">
-      <img src="images/bios/ChrisHumphreys.jpg" alt="Devious stare, picture of Chris" width="256">
-      <h3>Chris Humphreys</h3>
-      <p>Chris is a hardworker who loves cars.</p>
+    <div class="bio-card">
+        <img src="images/bios/ChrisHumphreys.jpg" alt="Chris Humphreys">
+        <h3>Chris Humphreys</h3>
+        <div class="role">Team Member</div>
+        <p>
+            Chris is a dedicated worker with a strong interest in
+            automotive technology and hands-on technical projects.
+        </p>
     </div>
 
-    <div class="bios-entry">
-      <img src="images/bios/RachelThomas.jpg" alt="Happy with a friend, picture of Rachel" width="256">
-      <h3>Rachel Thomas</h3>
-      <p>Rachel is a fan of computer science, horticulture, and the  media arts.</p>
+    <div class="bio-card">
+        <img src="images/bios/RachelThomas.jpg" alt="Rachel Thomas">
+        <h3>Rachel Thomas</h3>
+        <div class="role">Computer Science & Media Arts</div>
+        <p>
+            Rachel's interests include computer science, horticulture,
+            and media arts, combining technical and creative perspectives.
+        </p>
     </div>
 
-    <div class="bios-entry">
-      <img src="images/bios/BrendynMacaluso.jpg" alt="Sign me up, picture of Brendyn" width="256">
-      <h3>Brendyn Macaluso</h3>
-      <p>Brendyn is Pensacola Ice Flyers #1 fan.</p>
+    <div class="bio-card">
+        <img src="images/bios/BrendynMacaluso.jpg" alt="Brendyn Macaluso">
+        <h3>Brendyn Macaluso</h3>
+        <div class="role">Team Member</div>
+        <p>
+            Brendyn is a dedicated Pensacola Ice Flyers supporter who
+            enjoys teamwork, community involvement, and collaborative projects.
+        </p>
     </div>
-  </div>
+
+</div>
+
 </body>
+</html>
