@@ -6,7 +6,7 @@ title: Knowledge Is Power (KIP) - Project Outline
 <style>
   /* --- MERLOT THEME WIDTH EXPANSION OVERRIDES --- */
   .shell {
-    max-width: 1100px !important;
+    max-width: 740px !important;
     width: 90% !important;
     position: relative;
   }
@@ -18,9 +18,14 @@ title: Knowledge Is Power (KIP) - Project Outline
     box-sizing: border-box;
   }
   
-  /* --- FIX AND RE-CENTER MERLOT HEADER DECORATIONS --- */
   header {
     background: none !important; /* Wipes out the misaligned background image */
+    display: block !important; /* RESTORES THE NATIVE HEADER THAT WAS HIDDEN */
+    width: 100% !important;
+    max-width: 740px !important; 
+    margin: 0 auto !important;
+    float: none !important;
+    position: relative !important;
   }
 
   /* Keeps the theme header at its proper dimension so assets align perfectly */
