@@ -45,26 +45,40 @@
         .download-btn:hover {
             text-decoration: underline;
         }
+
+        .slide-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Keeps a perfect 16:9 Aspect Ratio */
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .slide-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body>
 
-    <div class="feasibility-card">
-        
-        <a class="download-btn" href="Feasibility Iteration 2.pdf" download>
-            Download Feasibility Presentation PDF
-        </a>
-        
+   !-- Responsive Wrapper Added Here --> 
+        <div class="slide-container">
+            <iframe src="https://google.com" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+        </div>
+    </div> 
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSEGKwaU9NTeCZbD6XrDmBkFcUuLOHfxCTRcWYGLmWdVGtEvq8X8KX0MWyWyuRXVT7Ygc7S7CNOpQmq/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
-
-    <div class="feasibility-card">
-        <h3>Feasibility Presentations</h3>
-        <p>Access the WIP feasibility presentation via Google Docs.</p>
-        <a class="feasibility-link" href="https://google.com" target="_blank" rel="noopener noreferrer">
-            View WIP feasibility presentation →
+    
+  <div class="feasibility-card">   
+ <a class="download-btn" href="Feasibility Iteration 2.pdf" download>
+            Download Feasibility Presentation PDF
         </a>
-    </div>
 
 </body>
 </html>
