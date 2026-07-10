@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            padding: 15px; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #ffffff;
+            margin: 0;
+        }
+        .glossary-title { 
+            color: #4a1525; 
+            border-bottom: 2px solid #4a1525; 
+            padding-bottom: 8px; 
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        .glossary-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 15px 0 0 0;
+        }
+        .glossary-item { 
+            margin-bottom: 16px; 
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+        .glossary-item:last-child {
+            border-bottom: none;
+        }
+        .term-number { 
+            font-weight: bold; 
+            color: #666;
+            margin-right: 4px;
+        }
+        .term-abbr { 
+            font-weight: bold; 
+            color: #4a1525; 
+        }
+        .term-definition { 
+            display: block; 
+            margin-top: 4px; 
+            color: #555;
+            padding-left: 10px;
+            border-left: 3px solid #f2e6e9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="glossary-title">Glossary</h2>
+    <ul class="glossary-list">
+        <li class="glossary-item">
+            <span class="term-number">4.1.</span> 
+            <span class="term-abbr">KIP:</span> 
+            <span class="term-definition">Knowledge Is Power.</span>
+        </li>
+        <li class="glossary-item">
+            <span class="term-number">4.2.</span> 
+            <span class="term-abbr">UX:</span> 
+            <span class="term-definition">User Experience.</span>
+        </li>
+        <li class="glossary-item">
+            <span class="term-number">4.3.</span> 
+            <span class="term-abbr">CDC:</span> 
+            <span class="term-definition">Centers for Disease Control and Prevention.</span>
+        </li>
+        <li class="glossary-item">
+            <span class="term-number">4.4.</span> 
+            <span class="term-abbr">MFCD:</span> 
+            <span class="term-definition">Major Functional Component Diagram.</span>
+        </li>
+    </ul>
+
+</body>
+</html>
