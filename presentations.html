@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,35 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feasibility Presentations</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; color: #333; background-color: #fafafa; }
-        h2 { color: #4a1525; border-bottom: 2px solid #4a1525; padding-bottom: 5px; }
-        .feasibility-card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .feasibility-link { display: inline-block; color: #4a1525; font-weight: bold; text-decoration: none; margin-top: 5px; }
-        .feasibility-link:hover { text-decoration: underline; }
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            color: #333;
+            background-color: #fafafa;
+        }
+        h2 {
+            color: #4a1525;
+            border-bottom: 2px solid #4a1525;
+            padding-bottom: 5px;
+        }
+        .feasibility-card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .feasibility-link {
+            display: inline-block;
+            color: #4a1525;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+        .feasibility-link:hover {
+            text-decoration: underline;
+        }
+        /* Download button */
+        .download-btn {
+            display: inline-block;
+            color: #4a1525;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+        .download-btn:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <h2>Presentations</h2>
-    <p>
-    <a class="download-btn"
-       href="KIP_Final_Feasibility_Presentation.pdf"
-       download>
-        Download Final Feasibility Presentation (PDF)
-    </a>
-</p>
+    <div class="feasibility-card">
+        
+        <a class="download-btn" href="Feasibility Iteration 2.pdf" download>
+            Download Feasibility Presentation PDF
+        </a>
+        
+        <!-- Embedded Google Slides Presentation -->
+        <iframe 
+            src="https://google.com" 
+            width="100%" 
+            height="600" 
+            style="border:1px solid #ccc;" 
+            allowfullscreen="true" 
+            mozallowfullscreen="true" 
+            webkitallowfullscreen="true">
+        </iframe>
+    </div>
 
-<iframe
-    src="KIP_Final_Feasibility_Presentation.pdf"
-    width="100%"
-    height="600"
-    style="border:1px solid #ccc;">
-</iframe>
-     <div class="feasibility-card">
+    <div class="feasibility-card">
         <h3>Feasibility Presentations</h3>
         <p>Access the WIP feasibility presentation via Google Docs.</p>
-        <a class="feasibility-link" href="https://docs.google.com/presentation/d/1jqYTC6Qc4k53AjrXFk8zmRQ2X28-QB2K1S5JTv36-WY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a class="feasibility-link" href="https://google.com" target="_blank" rel="noopener noreferrer">
             View WIP feasibility presentation →
         </a>
     </div>
+
 </body>
+</html>
