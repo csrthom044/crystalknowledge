@@ -70,10 +70,7 @@ title: Knowledge Is Power (KIP) - Project Outline
     gap: 8px;
   }
 
-  .custom-navigation-container nav strong {
-    color: #fdf6e2 !important;
-    margin-right: 5px;
-  }
+
 
   .custom-navigation-container nav a {
     color: #fdf6e2 !important;
@@ -98,12 +95,18 @@ title: Knowledge Is Power (KIP) - Project Outline
   }
 
   .custom-banner-container img {
-    width: 100%;
+    width: 90%;
     max-width: 1000px; /* Aligns perfectly with the iframe and footer widths */
     height: auto;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     display: block;
+  }
+
+  
+  /* Hide default text header elements inside the ribbon to make room for your image */
+  header h1, header h2 {
+    display: none !important;
   }
   /* Color matching the divider line from the layout image */
   .nav-divider {
