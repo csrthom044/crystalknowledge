@@ -12,15 +12,6 @@ title: Knowledge Is Power (KIP) - Project Outline
     position: relative;
   }
 
-  /* Keep header at original ribbon width */
-.shell header {
-  max-width: 740px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  position: relative;
-  min-height: 140px; /* Preventing purple background from overlap*/
-}
-
 /* Expand only content */
 .shell section, 
 #main_content {
@@ -44,12 +35,37 @@ title: Knowledge Is Power (KIP) - Project Outline
     opacity: 0 !important;
     visibility: hidden !important;
   }
+  
+  header, .shell header,
+  header::before,
+  header::after,
+  body::before {
+    background-color: #000000 !important; /* FORCES ENTIRE RIBBON TO BLACK */
+    border-color: #000000 !important;
+  }
 
+  .shell header {
+    max-width: 740px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    /* CENTERS AND EMBEDS BANNER IMAGE INSIDE THE RIBBON */
+    background: #000000 url('images/kip_banner.png') no-repeat center center !important;
+    background-size: contain !important; 
+    min-height: 160px !important; 
+  }
+  
+  /* Hide default theme text inside the ribbon cleanly */
+  header h1, header h2, header p {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
   /* --- MERLOT NAVIGATION BANNER --- */
   .custom-navigation-container {
-    margin: -10px auto 20px auto; /* Tucks the nav bar up slightly into the banner shadow */
+    margin: 15px auto 20px auto; 
     padding: 12px 24px;
-    background-color: #4a1525; 
+    background-color: #4a1525;
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     display: flex;
@@ -61,15 +77,16 @@ title: Knowledge Is Power (KIP) - Project Outline
     z-index: 10;
   }
 
-  .custom-navigation-container nav {
-    color: #fdf6e2; /* Cream/off-white text matching the header */
-    font-family: 'block-craft', Arial, sans-serif; /* CHANGED TO BLOCK-CRAFT */
+   .custom-navigation-container nav {
+    color: #fdf6e2;
+    font-family: 'block-craft', Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 8px;
   }
+
 
 
 
@@ -83,28 +100,6 @@ title: Knowledge Is Power (KIP) - Project Outline
   .custom-navigation-container nav a:hover {
     text-decoration: underline !important;
     opacity: 0.9;
-  }
-
-    /* --- NEW: CUSTOM IMAGE BANNER CONTAINER --- */
-  .custom-banner-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%); /* center the image*/
-    width: 100%;
-    max-width: 600px;/* limit ribbon so stays inside ribbon*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 5;
-  }
-
-  .custom-banner-container img {
-    width:100%;
-    max-width: 685px; /* Aligns perfectly with the iframe and footer widths */
-    height: auto;
-    display: block;
   }
 
   
