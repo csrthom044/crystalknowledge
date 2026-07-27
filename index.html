@@ -87,6 +87,24 @@ title: Knowledge Is Power (KIP) - Project Outline
     opacity: 0.9;
   }
 
+    /* --- NEW: CUSTOM IMAGE BANNER CONTAINER --- */
+  .custom-banner-container {
+    margin: 0 auto 15px auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .custom-banner-container img {
+    width: 100%;
+    max-width: 1000px; /* Aligns perfectly with the iframe and footer widths */
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    display: block;
+  }
   /* Color matching the divider line from the layout image */
   .nav-divider {
     color: #8c5366;
@@ -175,7 +193,9 @@ header::before {
 }
 </style>
 
-
+<div class="custom-banner-container">
+  <img src="images/kip_banner.png" alt="Knowledge Is Power Project Banner">
+</div>
 
 <!-- Custom Header Segment Wrapper -->
 <div class="custom-navigation-container">
