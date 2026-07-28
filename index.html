@@ -2,89 +2,58 @@
 layout: none
 title: Knowledge Is Power (KIP) - Project Outline
 ---
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Is Power (KIP) - Project Outline</title>
+  </head>
 <style>
 
 
-  /* --- BLACK BACKGROUND OVERRIDES --- */
+  /* ---  BACKGROUND  --- */
 body {
   background-color: #000000 !important;
+  color: #ffffff;
+  font-family: Courier, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-  
-  /* --- MERLOT THEME WIDTH EXPANSION OVERRIDES --- */
-  .shell {
-    margin: 0 auto 20px auto;
-    max-width: 1000px !important;
-    width: 90% !important;
-    position: relative;
+/* PAGE WRAPPER & WIDTH */
+  .project-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%;
   }
 
-/* Expand only content */
-.shell section, 
-#main_content {
-  width: 100% !important;
-  max-width: 1000px !important;
-  margin: 0 auto !important;
-  box-sizing: border-box;
+/* Header banner*/
+.custom-header-banner {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  background: #000000 url('images/kip_banner.png') no-repeat center center;
+      background-size: contain;
+      min-height: 160px;
 }
   
-  /* --- ABSOLUTE ELEMENT REMOVAL OVERRIDES --- */
-  /* Aggressively forces the default footer and built-in text to hide */
-  footer, .site-footer, .contextual-info, #header_meta {
-    display: none !important;
-  }
-
-  /* Hides the default corner ribbon completely */
-  a[href*="github.com"], 
-  [id*="fork"], 
-  .github-fork-ribbon {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-  }
-  
-  header, .shell header,
-  header::before,
-  header::after,
-  body::before {
-    background-color: #800000 !important; 
-    border-color: #800000 !important;
-  }
-
-  .shell header {
-    max-width: 740px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    /* CENTERS AND EMBEDS BANNER IMAGE INSIDE THE RIBBON */
-    background: #000000 url('images/kip_banner.png') no-repeat center center !important;
-    background-size: contain !important; 
-    min-height: 160px !important; 
-  }
-  
-  /* Hide default theme text inside the ribbon cleanly */
-  header h1, header h2, header p {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-  
-  /* --- MERLOT NAVIGATION BANNER --- */
+ /* Navigation banner */
   .custom-navigation-container {
-    margin: 15px auto 20px auto; 
+    margin: 15px auto 20px auto;
     padding: 12px 24px;
     background-color: #000000;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    boarder-radius: 4px;
+    box-shadow 0 4px 6px rgba(0,0,0,0.15);
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
     box-sizing: border-box;
-    position: relative;
-    z-index: 10;
+    border: 1px solid #800000;
   }
-
+  
+ 
+ 
    .custom-navigation-container nav {
     color: #000000;
     font-family: Courier, Arial, sans-serif;
@@ -94,9 +63,6 @@ body {
     align-items: center;
     gap: 8px;
   }
-
-
-
 
   .custom-navigation-container nav a {
     color: #000000 !important;
@@ -110,14 +76,7 @@ body {
     opacity: 0.9;
   }
 
-  
-  /* Hide default text header elements inside the ribbon to make room for your image */
-  header h1, header h2 {
-    visibility: hidden !important;
-    opacity: 0 !important;
-    margin: 0 !important;
-    padding: 20px 0 !important;
-  }
+
   /* Color matching the divider line from the layout image */
   .nav-divider {
     color: #8c5366;
@@ -131,19 +90,6 @@ body {
     opacity: 1;
   }
   
-  /* Be rid of the blue sliver forever*/
-  body::before,
-header::before {
-  display: none !important;
-  content: none !important;
-}
-  span.banner-fix {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    background: none !important;
-}
   .feasibility-card { 
             background: white; 
             padding: 15px; 
